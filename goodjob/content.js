@@ -6,10 +6,25 @@
 
 	var hostname = location.hostname;
 
-	if (isInBlackList(hostname)) {
-		showWarningMask(hostname);
-	} else {
-		console.log('allow');
+	if(shouldIGoodJob()) {
+		if (isInBlackList(hostname)) {
+			showWarningMask(hostname);
+		} else {
+			console.log('allow');
+		}
+	}
+
+	function shouldIGoodJob() {
+		var today = new Date();
+		var weekday = today.getDay();
+		if (weekday >= 1 && weekday <=5) {
+			var hours = today.getHours();
+			if(hours >=9 && hours <= 18) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	function isInBlackList(hostname) {
