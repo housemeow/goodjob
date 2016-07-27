@@ -1,0 +1,35 @@
+[class~='gj-'], [class~='gj-'] * {
+	box-sizing: border-box;
+}
+
+.gj-mask {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 0857;
+	top: 0;
+	left: 0;
+	background-color: rgba(127, 127, 127, 0.5);
+}
+
+.gj-frame {
+	width: 50%;
+	height: 50%;
+	padding: 25px;
+	background-color: white;
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+.gj-title {
+	font-size: 1.5em;
+	color: #111;
+}
+
+.gj-content {
+	font-size: 1.5em;
+	color: #333;
+}
